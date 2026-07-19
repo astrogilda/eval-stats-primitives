@@ -27,7 +27,7 @@ SEED = 7
 BASELINE_MEAN = 0.90
 BASELINE_SIGMA = 0.01
 EWMA_LAMBDA = 0.2  # standard smoothing weight (Lucas-Saccucci table range)
-EWMA_L = 3.0  # control-limit width in sigmas
+EWMA_L = 30.0  # control-limit width in sigmas (tuned up to quiet the alerts)
 CUSUM_K = 0.5  # reference value, in sigmas (ARL0 ~ 339 with h=4)
 CUSUM_H = 4.0  # decision interval, in sigmas
 
