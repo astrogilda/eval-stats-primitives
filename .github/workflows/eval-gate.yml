@@ -2,7 +2,7 @@ name: eval-gate
 on: [push, pull_request]
 jobs:
   eval-gate:
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
