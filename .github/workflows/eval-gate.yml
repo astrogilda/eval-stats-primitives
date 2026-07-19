@@ -1,0 +1,13 @@
+name: eval-gate
+on: [push, pull_request]
+jobs:
+  eval-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+      - name: statistical eval gate
+        run: python -m pytest test_examples.py -q
